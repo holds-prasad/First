@@ -1,0 +1,26 @@
+<h1>Registration</h1>
+<!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success..!</strong> Your data Add.
+    <button type="button" (click)="closealert()" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+<form [formGroup]="reg"  (ngSubmit)="regdata()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Company Id</label>
+      
+        <!-- <input type="Id" class="form-control" id="Id" formControlName="Id" placeholder="CompanyId">
+      <label for="exampleInputEmail1">Company Name</label>
+       -->
+      <input type="CompanyName"  required class="form-control" id="CompanyName" formControlName="name" placeholder="Enter The Company Name">
+      <label for="exampleInputEmail1">Company Email</label>
+      <input email type="Email"  required class="form-control" id="Emailr" formControlName="Email"  placeholder="Enter The Email">
+     
+      <label for="exampleInputEmail1">Password</label>
+      <input type="Password" required minlength="4" maxlength="12" class="form-control" id="passr" formControlName="Password"  placeholder="Enter The Password">
+      
+    </div>
+    
+    
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>

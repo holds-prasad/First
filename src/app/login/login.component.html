@@ -1,0 +1,20 @@
+<h1>Login Form</h1>
+<form [formGroup]="login"  (ngSubmit)="logindata()">
+    <div class="form-group">
+        
+      
+        <!-- <input type="Id" class="form-control" id="Id" formControlName="Id" placeholder="CompanyId">
+      <label for="exampleInputEmail1">Company Name</label>
+       -->
+     
+      <label for="exampleInputEmail1">Company Email</label>
+      <input type="Email" required class="form-control" id="Emailr" email formControlName="Email"  placeholder="Enter The Email">
+      
+      <label for="exampleInputEmail1">Password</label>
+      <input type="Password" required class="form-control" id="passr" minlength="4" maxlength="12"  formControlName="Password"  placeholder="Enter The Password">
+      
+    </div>
+    
+    
+    <button  mat-button color="primary" type="submit" class="btn btn-primary">Submit</button>
+  </form>
